@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body id="body">
+    <header class="header">
+      <div class="player">
+        <div class="player-controls">
+          <audio src=""></audio>
+          <button class="play-prev player-icon" id="prev-song"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon" id="next-song"></button>
+        </div>
+        <span class="time-music" id="time-music"></span>
+        <input
+          type="range"
+          id="SongLenght"
+          value="0"
+          min="0"
+          max=""
+          step="0.01"
+          class="slider"
+        />
+        <div class="player-controls margin-left">
+          <input
+            type="range"
+            id="volumeLenght"
+            value="0.8"
+            min="0"
+            max="1"
+            step="0.01"
+            class="slider"
+          />
+          <button class="volume-on player-icon" id="volumeButton"></button>
+        </div>
+        <ul class="play-list" id="check"></ul>
+      </div>
+      <div class="button-div">
+        <button class="button-style" id="change-player">delete player</button>
+        <button class="button-style" id="change-weather">delete weather</button>
+        <select class="change-lang button-style">
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
+
+      <div class="weather">
+        <input type="text" class="city" value="Minsk" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon" id="prev"></button>
+        <button class="slide-next slider-icon" id="next"></button>
+      </div>
+      <time class="time" id="time">21 </time>
+      <date class="date" id="date"></date>
+      <div class="greeting-container">
+        <span class="greeting" id="greeting"></span>
+        <input type="text" class="name" placeholder="[Enter name]" id="name" />
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="change-quote" id="change"></button>
+      <div>
+        <div class="quote" id="quote"></div>
+        <div class="author" id="author"></div>
+      </div>
+    </footer>
+
+    <script src="js/playList.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
